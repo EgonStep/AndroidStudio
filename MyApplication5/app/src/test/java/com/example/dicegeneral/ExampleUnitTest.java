@@ -1,17 +1,13 @@
 package com.example.dicegeneral;
 
-import android.widget.TextView;
-
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -27,15 +23,15 @@ public class ExampleUnitTest {
     @Test
     public void test() {
         List<Integer> lista = new ArrayList<>();
-        lista.add(5);
-        lista.add(5);
-        lista.add(5);
-        lista.add(5);
+        lista.add(1);
+        lista.add(4);
+        lista.add(3);
+        lista.add(2);
         lista.add(5);
 
         int result = getDicesThrowsResult((lista));
 
-        assertEquals(result, 50);
+        assertEquals(40, result);
     }
 
     private int getDicesThrowsResult(List<Integer> dices) {
@@ -57,6 +53,11 @@ public class ExampleUnitTest {
             for (Integer d : dices)
                 sum += d;
             return sum;
+        } else if (countMap.containsValue(1)){
+            if (countMap.containsKey(1))
+                return 40;
+            else
+                return 30;
         } else {
             return 0;
         }
