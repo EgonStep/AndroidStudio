@@ -1,11 +1,11 @@
 package com.example.dicegeneralrandom;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -39,8 +39,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void initiateGame(View view) {
-        
-        List<Integer> dices = throwDices(5);
+        List<String> values = new ArrayList<>();
+        values.add(editInput1.getText().toString());
+        values.add(editInput2.getText().toString());
+        values.add(editInput3.getText().toString());
+        values.add(editInput4.getText().toString());
+        values.add(editInput5.getText().toString());
+
+        List<Integer> dices = checkNullDices(values);
         printSequence(dices, textPlay);
 
         String resultClassification = getDicesThrowsResult(dices);
@@ -48,11 +54,14 @@ public class MainActivity extends AppCompatActivity {
         textSequence.setText(String.format("Classification - %s", resultClassification));
     }
 
-    private List<Integer> throwDices(int unit) {
+    private List<Integer> checkNullDices(List<String> values) {
         List<Integer> dices = new ArrayList<>();
-        for (int i = 0; i < unit; i++) {
-            int dice = (int) (Math.random() * 6) + 1;
-            dices.add(dice);
+        for (String value : values) {
+            if (value.matches("")) {
+                dices.add((int) (Math.random() * 6) + 1);
+            } else {
+                dices.add(Integer.parseInt(value));
+            }
         }
         return dices;
     }
