@@ -38,15 +38,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textScore"
-        android:text="Score "
-        android:textSize="15sp"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/textSequence"
-        android:text="Seguence "
+        android:text="Classification "
         android:textSize="15sp"/>
 
 </LinearLayout>
