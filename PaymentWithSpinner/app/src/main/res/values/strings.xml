@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PaymentSpinner</string>
+
+    <string-array name="payments_methods">
+        <item>Credit</item>
+        <item>Debit</item>
+        <item>Billet</item>
+    </string-array>
+</resources>

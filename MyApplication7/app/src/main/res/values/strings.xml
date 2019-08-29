@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyApplication7</string>
+
+    <string-array name="samples">
+        <item>Sample 1</item>
+        <item>Sample 2</item>
+        <item>Sample 3</item>
+    </string-array>
+
+</resources>
