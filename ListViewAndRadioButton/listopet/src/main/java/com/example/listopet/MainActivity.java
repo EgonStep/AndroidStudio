@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         courses = new ArrayList<>();
-        courses.add(new Course("Algorithm", 8.8));
+        courses.add(new Course("Algorithm", 3.8));
         courses.add(new Course("Database", 6.8));
         courses.add(new Course("DevOps", 8.3));
 
