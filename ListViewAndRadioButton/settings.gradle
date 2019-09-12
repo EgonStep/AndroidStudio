@@ -1,1 +1,1 @@
-include ':app', ':listopet'
+include ':app', ':listopet', ':shoppingchart', ':listproducts'
