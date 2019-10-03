@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AppWithRoom</string>
+    <string name="editNameHint">Item Name</string>
+    <string name="editAmountHint">Amount.</string>
+    <string name="saveBtn">Save</string>
+    <string name="NewItemBtnText">New Item</string>
+</resources>
